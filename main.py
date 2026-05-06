@@ -10,16 +10,19 @@ def main():
         else:
             if not clues:
                 clues.append('bajgle')
+            else:
                 print(clues)
 
 def get_clues(user_num, secret_number):
+        clues = []
         for index, number in enumerate(user_num):
             if number == secret_number[index]:
                 clues.append('femi')
+                print(number)
             elif number in secret_number:
-                clues.append('piko')  
-
-
+                clues.append('piko')
+                print(number)
+        return clues
 
 main()
 
