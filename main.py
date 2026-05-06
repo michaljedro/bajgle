@@ -3,15 +3,23 @@ def main():
     print("LET'S PLAY THE GAME")
     while True:      
         user_num = input()
-        clues = []
-        for index, number in enumerate(user_num):
-            if number == secret_number[index]:
-                print(f'{number} and {secret_number[index]}')
-                print('remis')
+        clues = get_clues(user_num, secret_number)
         if user_num == secret_number:
             print('Mamy to')   
             break
         else:
-            print("Źle")
+            if not clues:
+                clues.append('bajgle')
+                print(clues)
+
+def get_clues(user_num, secret_number):
+        for index, number in enumerate(user_num):
+            if number == secret_number[index]:
+                clues.append('femi')
+            elif number in secret_number:
+                clues.append('piko')  
+
+
+
 main()
 
