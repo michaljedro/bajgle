@@ -7,11 +7,6 @@ def main():
         if user_num == secret_number:
             print('Mamy to')   
             break
-        else:
-            if not clues:
-                clues.append('bajgle')
-            else:
-                print(clues)
 
 def get_clues(user_num, secret_number):
         clues = []
@@ -22,6 +17,8 @@ def get_clues(user_num, secret_number):
             elif number in secret_number:
                 clues.append('piko')
                 print(number)
+            else: 
+                clues.append('bajgle')
         return clues
 
 main()
