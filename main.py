@@ -20,6 +20,5 @@ def get_clues(user_num, secret_number):
             else: 
                 clues.append('bajgle')
         return clues
-
 main()
 
