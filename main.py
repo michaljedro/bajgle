@@ -1,3 +1,7 @@
+import random
+
+
+
 secret_number = '123'
 def main():
     print("LET'S PLAY THE GAME")
@@ -22,3 +26,4 @@ def get_clues(user_num, secret_number):
         return clues
 main()
 
+assert get_clues('666','123') == ['bajgle']
